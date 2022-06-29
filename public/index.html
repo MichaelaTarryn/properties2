@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- icon link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Properties list</title>
+</head>
+
+<body>
+  <section class="bg-light text-dark py-5 vh-100" id="landing">
+    <div class="container">
+      <div class="container d-flex justify-content-center align-items-center flex-column h-100"></div>
+
+    </div>
+  </section>
+  <section class="bg-light text-dark py-5 vh-100" id="search">
+    <div class="container">
+      <div id="searchbar">
+        <div class="d-flex w-25 ms-3">
+    <label for="" class="form-label">Bedrooms</label>
+    <select class="form-select" name="" id="sortCategory" onchange="sortCategory()">
+      <option value="1" >1</option>
+      <option value="2" >2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+  <div class="d-flex w-25 ms-3">
+    <label for="" class="form-label">Price</label>
+    <select class="form-select" name="" id="sortCategory" onchange="sortCategory()">
+      <option value="1">$5000</option>
+      <option value="2">$5000-$10000</option>
+      <option value="3">$10000-$15000</option>
+      <option value="4">$15000-$20000</option>
+      <option value="5">$20000-$25000</option>
+      <option value="6">$25000-$30000</option>
+      <option value="7">$30000-$35000</option>
+      <option value="8">$35000-$40000</option>
+      <option value="9">$40000-$45000</option>
+      <option value="10">$45000-$50000</option>
+    </select>
+  </div>
+  <div class="d-flex w-25 ms-3">
+    <label for="" class="form-label">Sort name</label>
+    <select class="form-select" name="" id="sortName" onchange="sortName()">
+      <option value="ascending">Ascending</option>
+      <option value="descending">Descending</option>
+    </select>
+  </div>
+  <div class="d-flex w-25 ms-3">
+    <label for="" class="form-label">Sort price</label>
+    <select
+      class="form-select"
+      name=""
+      id="sortPrice"
+      onchange="sortPrice()"
+    >
+      <option value="ascending">Ascending</option>
+      <option value="descending">Descending</option>
+    </select>
+  </div>
+  <button id="button1">Search</button>
+      </div>
+
+    </div>
+  </section>
+  <section class="bg-light text-dark py-5 " id="Properties">
+    <h1>To view more detail  please click on rent for</h1>
+  </section>
+  <section class="bg-dark text-light py-5 vh-100" id="footer">
+    <div class="container vh-50 p-4">
+      <div class="row align-items-start py-5">
+        <div class="col-sm-3">
+          <H5>Discovery</H5>
+        </div>
+        <div class="col-sm-3">
+          <H5>Contact us</H5>
+        </div>
+        <div class="col-sm-3">
+          <H5> Newletter</H5>
+        </div>
+        <DIV class="row align-items-start">
+          <div class="col-sm-3 py-2">
+            <h6> > Miami</h6>
+          </div>
+          <div class="col-sm-3 py-2">
+            <h6><i class="bi bi-geo-alt"></i> 774 NE 84th St Miami, FL 33879</h6>
+          </div>
+          <div class="col-sm-6">
+            <form action="https://formspree.io/f/xrgjvrvr"
+            method="POST">
+            <input class="input" name="name" type="text" placeholder="Please enter the email" size="50" required="" >
+            <button class="btn btn-link text-light " type="submit">Submit</button>
+          </div></form>
+          <div class="col-sm-3 py-2">
+            <h6> > Los Angeles</h6>
+          </div>
+          <div class="col-sm-3 py-2">
+            <h6> <i class="bi bi-telephone"></i> 987 654 9875</h6>
+          </div>
+        </DIV>
+        <DIV class="row align-items-start">
+          <div class="col ">
+            <h6>> Chicago</h6>
+          </div>
+          <div class="col ">
+            <h6><i class="bi bi-phone-fill"></i> 879 456 1349</h6>
+          </div>
+          <div class="col-6">
+            <h6>Houzez is a premium WordPress theme for Designers & Real Estate Agents.</h6>
+          </div>
+        </DIV>
+        <DIV class="row align-items-start py-2">
+          <div class="col-3 ">
+            <h6> > New York</h6>
+          </div>
+          <div class="col-3 ">
+            <h6><i class="bi bi-envelope-fill"></i> email@houzez.co</h6>
+          </div>
+        </DIV>
+      </div>
+      <div class="footer2">
+        © Michaela - All rights reserved
+      </div>
+  </section>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://kit.fontawesome.com/2dd6cd0ef4.js" crossorigin="anonymous"></script>
+  <script src="./javascript/code.js"></script>
+</body>
+
+</html>

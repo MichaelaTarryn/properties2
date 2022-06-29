@@ -1,0 +1,147 @@
+#landing {
+    background: 
+      /* top, transparent red, faked with gradient */ linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+      ),
+      /* bottom, image */ url(https://picsum.photos/1920/1200);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 25px;
+  }
+
+  #search .btn{
+    background-color :rgba(0, 174, 255, 0.56);
+    width: 100px;
+    text-decoration: none;
+    margin: auto;
+  }
+
+  #search .btn:hover {
+    background-color: rgba(0, 174, 255, 0.56);
+    color: black!important;
+  }
+  #search .btn:focus{
+    background-color: rgba(0, 174, 255, 0.56);
+    color: black!important;
+  }
+ 
+  .card{
+    margin-top: 40px;
+    margin-left: 40px;
+    border: 2px solid black;
+    width: 350px;
+    height: 300px;
+    display: inline;
+    float: left;
+    /* position: relative; */
+   
+}
+.card-img-top:hover{
+     opacity: 0.5;
+}
+
+.card-title:hover{
+    color:rgba(0, 174, 255, 0.56);
+
+}
+.card-title .btn{
+  background-color:black;
+  color: white;
+}
+.card-img-top{
+    min-width: 150px;
+    height: 250px;
+    /* position: absolute;
+  bottom: 8px;
+  left: 16px; */
+}
+
+
+ #footer .btn{
+    background-color :rgba(0, 174, 255, 0.56);
+    width: 150px;
+    font-size:medium;
+    height: 42px;
+    text-decoration: none;
+  }
+  #footer .input {
+    line-height: 34px;
+}
+
+#Properties{
+background-color: brown;
+height: 170vh;
+margin-bottom: 30px;
+}
+
+.card-title{
+  position: absolute;
+  top: 200px;
+  left: 16px;
+}
+.card-body .btn:hover{
+    background-color: black;
+    color: rgba(0, 174, 255, 0.56);
+}
+
+#searchbar{
+  background-color:rgb(192,192,192);
+  margin: auto;
+  width: 1110px;
+  height: 60px;
+  display: flex;
+  border-radius: 5px;
+
+}
+
+h1{
+  margin-left:40px;
+}
+#button1{
+  background-color:rgb(192,192,192);
+  width: 100px;
+  color: rgba(0, 174, 255, 0.56);
+}
+
+@media only screen and (max-width: 600px){
+  #landing{
+    width: 590px;
+    object-fit: cover;
+  }
+  #searchbar{
+    width:100px;
+    margin-left: 40px;
+    display:inline;
+    font-size: medium;
+    line-height: 65px;
+  }
+  #searchbar-option{
+  width: 200px;
+  }
+  #sortCategory{
+    width: 200px;
+  }
+ #sortName{
+  width: 290px;
+  }
+  #sortPrice{
+    width: 290px;
+  }
+  .card{
+    width: 400px!important;
+  }
+  #Properties{
+    margin-top: 40px;
+    color: white!important;
+    background-color: black !important;
+  height:600vh!important;
+  }
+  /* footer not working */
+  .input{
+    width: 240px!important;
+  }
+  h1{
+    font-size: small;
+  }
+}
