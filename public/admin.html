@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<!-- icon link -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Admin page</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 mr-auto">
+              <li class="nav-item">
+                <a
+                  class="btn btn-primary me-3 active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addProductModal"
+                >
+                  Add a product
+                </button>
+  
+                <!-- Modal -->
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+      class="modal fade"
+      id="addProductModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Add product
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="addTitle" class="form-label">Title</label>
+              <input
+                class="form-control"
+                type="text"
+                name="addTitle"
+                id="addTitle"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Beds</label>
+              <select
+                class="form-select"
+                name="addbed"
+                id="addBed"
+              >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              </select>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Showers</label>
+                <select
+                  class="form-select"
+                  name="addShower"
+                  id="addShower"
+                >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Parking</label>
+                <select
+                  class="form-select"
+                  name="addParking"
+                  id="addParking"
+                >
+                <option value="1">1</option>
+                <option value="2">2</option>            
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Square</label>
+                <select
+                  class="form-select"
+                  name="addSquare"
+                  id="addSquare"
+                >
+                <option value="1000">1000</option>
+                <option value="2000">2000</option> 
+                <option value="3000">3000</option>
+                <option value="4000">4000</option>
+                </select>
+              </div>
+            <div class="mb-3">
+                <label for="" class="form-label"></label>
+                <select
+                  class="form-select"
+                  name="addButton"
+                  id="addButton"
+                >
+                <option value="For Rent">For Rent</option>
+                
+                </select>
+              </div>
+            <div class="mb-3">
+              <label for="addPrice" class="form-label">Price</label>
+              <input
+                class="form-control"
+                type="text"
+                name="addPrice"
+                id="addPrice"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="addImg" class="form-label">Image URL</label>
+              <input
+                class="form-control"
+                type="text"
+                name="addImg"
+                id="addImg"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              onclick="createProduct()">
+              Create Product
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class=" text-dark py-5 vh-100" id="landing1">
+        <div class="container12"> 
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">Img</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Month</th>
+                      <th scope="col">bed</th>
+                      <th scope="col">shower</th>
+                      <th scope="col">car</th>
+                      <th scope="col">square</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody" >
+
+                  </tbody>
+            </table>
+            
+            
+             
+          </div>
+    </section>
+      <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Initialize AOS -->
+<script>
+  AOS.init();
+</script>
+<script src="https://kit.fontawesome.com/2dd6cd0ef4.js" crossorigin="anonymous"></script>
+<script src="./javascript/code2.js"></script>
+</body>
+</html>

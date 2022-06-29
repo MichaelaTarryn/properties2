@@ -1,5 +1,5 @@
-let array = JSON.parse(localStorage.getItem("properties"))
-  ? JSON.parse(localStorage.getItem("properties"))
+let array = JSON.parse(localStorage.getItem("array"))
+  ? JSON.parse(localStorage.getItem("array"))
   : [{
     img:'../images/H1.jpg',
     button:'For rent',
@@ -112,7 +112,9 @@ let array = JSON.parse(localStorage.getItem("properties"))
 },
 ];
 
-// READ
+//READ
+function readProducts(array)
+ {
 let properties = document.getElementById('Properties');
 array.forEach((item, index) => {
     properties.innerHTML += `
@@ -151,31 +153,32 @@ ${item.button}
      </div>
      
 </div>
-`})
-;
-
+`;
+});
+}
+readProducts(array);
 
 // SORT BY CATEGORY
 function sortCategory() {
   let category = document.querySelector("#sortCategory").value;
 
   if (category == "All") {
-    return readProducts(products);
+    return readarray(array);
   }
 
-  let foundProducts = products.filter((product) => {
-    return product.category == category;
+  let foundarray = array.filter((array) => {
+    return array.category == category;
   });
 
-  readProducts(foundProducts);
-  console.log(foundProducts);
+  readProducts(foundarray);
+  console.log(foundarray);
 }
 
 
 function sortName() {
   let direction = document.querySelector("#sortName").value;
 
-  let sortedProducts = products.sort((a, b) => {
+  let sortedarray = array.sort((a, b) => {
     if (a.title.toLowerCase() < b.title.toLowerCase()) {
       return -1;
     }
@@ -184,9 +187,9 @@ function sortName() {
     }
     return 0;
   });
-  if (direction == "descending") sortedProducts.reverse();
-  console.log(sortedProducts);
-  readProducts(products);
+  if (direction == "descending") sortedarray.reverse();
+  console.log(sortedarray);
+  readProducts(array);
 }
 
 // SORT BY PRICE
@@ -194,14 +197,102 @@ function sortName() {
 function sortPrice() {
   let direction = document.querySelector("#sortPrice").value;
 
-  let sortedProducts = products.sort((a, b) => a.price - b.price);
+  let sortedarray = array.sort((a, b) => a.price - b.price);
 
-  console.log(sortedProducts);
+  console.log(sortedarray);
 
-  if (direction == "descending") sortedProducts.reverse();
-  readProducts(sortedProducts);
+  if (direction == "descending") sortedarray.reverse();
+  readProducts(sortedarray);
+}
+
+// // CREATE
+function createProduct() {
+  let title = document.querySelector("#addTitle").value;
+  let bed= document.querySelector("#addBed").value;
+  let price = document.querySelector("#addPrice").value;
+  let img = document.querySelector("#addImg").value;
+  let button=document.querySelector("#addButton").value;
+  let shower=document.querySelector("#addShower").value;
+  let parking=document.querySelector("#addParking").value;
+  try {
+    if (!title || !price || !img) throw new Error("Please fill in all fields");
+    array.push({
+      title,
+      bed,
+      price,
+      img,
+      button,
+      shower,
+      parking,
+    
+    });
+    localStorage.setItem("array", JSON.stringify(array));
+    readProducts(array);
+  } catch (err) {
+    alert(err);
+  }
 }
 
 
+console.log(array);
 
+// UPDATE
+// function updateProduct(index) {
+//   let title = document.querySelector(`#editTitle${index}`).value;
+//   let bed = document.querySelector(`#editCategory${index}`).value;
+//   let price = document.querySelector(`#editPrice${index}`).value;
+//   let img = document.querySelector(`#editImg${index}`).value;
+
+//   try {
+//     if (!title || !price || !img) throw new Error("Please fill in all fields");
+//     array[index] = {
+//       title,
+//       bed,
+//       price,
+//       img,
+//       button,
+//     };
+//     localStorage.setItem("array", JSON.stringify(array));
+//     readProducts(array);
+//   } catch (err) {
+//     alert(err);
+//   }
+// }
+
+
+let edit=document.getElementById("load")
+
+function LoadArray(){
+  edit.innerHTML='';
+  array.forEach((item,index)=>{
+    edit.innerHTML+=`
+    <div class="row">
+
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                  ${item.title}
+                </div>
+                <div class="col-sm">
+                  IMG
+                </div>
+                <div class="col-sm">
+                  SHOWERS
+                </div>
+                <div class="col-sm">
+                  CARS
+                </div>
+                <div class="col-sm">
+                  SQUARES
+                </div>
+                <div class="col-sm">
+                  BEDS
+                </div>
+                PRICE
+              </div> 
+    `
+  }
+  )
+
+}
 

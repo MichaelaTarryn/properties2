@@ -9,6 +9,14 @@
     background-attachment: fixed;
     margin-top: 25px;
   }
+  #landing1{
+    height: 1290PX ;
+    background-color:rgb(192,192,192);
+  }
+  #tbody{
+    height: 1290PX ;
+    background-color:rgb(192,192,192);
+  }
 
   #search .btn{
     background-color :rgba(0, 174, 255, 0.56);
@@ -25,7 +33,11 @@
     background-color: rgba(0, 174, 255, 0.56);
     color: black!important;
   }
- 
+  #container12{
+    margin-top: 20px;
+    width: 1200px;
+    margin-left: 60px;
+  }
   .card{
     margin-top: 40px;
     margin-left: 40px;
@@ -37,6 +49,7 @@
     /* position: relative; */
    
 }
+
 .card-img-top:hover{
      opacity: 0.5;
 }
@@ -57,7 +70,10 @@
   left: 16px; */
 }
 
-
+.nav-item .btn{
+  background:rgb(192,192,192);
+  color:rgba(0, 174, 255, 0.56);
+}
  #footer .btn{
     background-color :rgba(0, 174, 255, 0.56);
     width: 150px;
@@ -71,7 +87,7 @@
 
 #Properties{
 background-color: brown;
-height: 170vh;
+height: 270vh;
 margin-bottom: 30px;
 }
 
