@@ -9,8 +9,13 @@
     background-attachment: fixed;
     margin-top: 25px;
   }
+  /* Hide search-bar */
+  .search-bar{
+    display: none;
+  }
+  
   #landing1{
-    height: 1290PX ;
+    height: 200vh ;
     background-color:rgb(192,192,192);
   }
   #tbody{
@@ -37,19 +42,30 @@
     margin-top: 20px;
     width: 1200px;
     margin-left: 60px;
+    height: fit-content;
+    margin-bottom: 20px!important;
+
   }
-  .card{
+  #card{
     margin-top: 40px;
     margin-left: 40px;
     border: 2px solid black;
     width: 350px;
     height: 300px;
-    display: inline;
-    float: left;
+    /* display: inline;*/
+    /* float: right;  */
     /* position: relative; */
+    
+  }
+  #card2{
+    margin-top: 40px;
+    margin-left: 40px;
+    border: 2px solid black;
+    width: 350px;
+    height: 300px;
    
-}
-
+    /* position: relative; */
+  }
 .card-img-top:hover{
      opacity: 0.5;
 }
@@ -85,16 +101,39 @@
     line-height: 34px;
 }
 
+#footer{
+  margin-top: 10px;
+}
 #Properties{
-background-color: brown;
-height: 270vh;
-margin-bottom: 30px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  /* padding:20px; */
+/* height: 270vh;
+*/
+margin-bottom: 10px;
+
+}
+
+#new {
+  background: url('/images/bg4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: brown; */
+height: fit-content;
+display: flex;
+flex-wrap: wrap;
+padding:20px;
+
+/* position: relative; */
+/* margin-bottom: 30px; */
 }
 
 .card-title{
   position: absolute;
   top: 200px;
-  left: 16px;
+  /* left: 16px; */
 }
 .card-body .btn:hover{
     background-color: black;
@@ -118,6 +157,21 @@ h1{
   background-color:rgb(192,192,192);
   width: 100px;
   color: rgba(0, 174, 255, 0.56);
+}
+
+#sortName1{
+  background-color:rgb(192,192,192);
+  color: rgba(0, 174, 255, 0.56);
+  
+
+}
+#sortPrice1{
+  background-color:rgb(192,192,192);
+  color: rgba(0, 174, 255, 0.56);
+ 
+}
+.hr4{
+  margin-left: 90px;
 }
 
 @media only screen and (max-width: 600px){

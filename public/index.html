@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- icon link -->
@@ -20,29 +20,14 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Home page</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navbarSupportedContent"
-      >
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 mr-auto">
           <li class="nav-item">
-            <a
-              class="btn btn-primary me-3 active"
-              aria-current="page"
-              href="./admin.html"
-              >Admin</a
-            >
+            <a class="btn btn-primary me-3 active" aria-current="page" href="./admin.html">Admin</a>
         </ul>
       </div>
     </div>
@@ -53,67 +38,69 @@
 
     </div>
   </section>
-  <section class="bg-light text-dark py-5 vh-100" id="search">
+  <section class="bg-light text-dark py-5 " id="search">
     <div class="container">
       <div id="searchbar">
         <div class="d-flex w-25 ms-3">
-    <label for="" class="form-label">Bedrooms</label>
-    <select class="form-select" name="" id="sortCategory" onchange="sortCategory()">
-      <option value="1" >1</option>
-      <option value="2" >2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-  </div>
-  <div class="d-flex w-25 ms-3">
-    <label for="" class="form-label">Price</label>
-    <select class="form-select" name="" id="sortPrice1" onchange="sortCategory()">
-      <option value="1">$5000</option>
-      <option value="2">$5000-$10000</option>
-      <option value="3">$10000-$15000</option>
-      <option value="4">$15000-$20000</option>
-      <option value="5">$20000-$25000</option>
-      <option value="6">$25000-$30000</option>
-      <option value="7">$30000-$35000</option>
-      <option value="8">$35000-$40000</option>
-      <option value="9">$40000-$45000</option>
-      <option value="10">$45000-$50000</option>
-    </select>
-  </div>
-  <div class="d-flex w-25 ms-3">
-    <label for="" class="form-label">Sort name</label>
-    <select class="form-select" name="" id="sortName" onchange="sortName()">
-      <option value="ascending">Ascending</option>
-      <option value="descending">Descending</option>
-    </select>
-  </div>
-  <div class="d-flex w-25 ms-3">
-    <label for="" class="form-label">Sort price</label>
-    <select
-      class="form-select"
-      name=""
-      id="sortPrice"
-      onchange="sortPrice()"
-    >
-      <option value="ascending">Ascending</option>
-      <option value="descending">Descending</option>
-    </select>
-  </div>
-  <button id="button1">Search</button>
+          <label for="" class="form-label">Bedrooms</label>
+          <select class="form-select" name="" id="sortCategory">
+            <option value="All">Beds</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="d-flex w-25 ms-3">
+          <label for="" class="form-label">Price</label>
+          <select class="form-select" name="" id="sortPrice1">
+            <option value="All">All</option>
+            <option value="1000">$1000</option>
+            <option value="2000">$2000</option>
+            <option value="3000">$3000</option>
+            <option value="4000">$4000</option>
+            <option value="5000">$5000</option>
+            <option value="6000">$6000</option>
+            <option value="7000">$7000</option>
+            <option value="8000">$8000</option>
+            <option value="9000">$9000</option>
+            <option value="10000">$10000</option>
+          </select>
+        </div>
+        <div class="d-flex w-25 ms-3">
+          <label for="" class="form-label">Sort name</label>
+          <select class="form-select" name="" id="sortName" onchange="sortName()">
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+          </select>
+        </div>
+        <div class="d-flex w-25 ms-3">
+          <label for="" class="form-label">Sort price</label>
+          <select class="form-select" name="" id="sortPrice" onchange="sortPrice()">
+            <option value="normal">All</option>
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+          </select>
+        </div>
+        
       </div>
+
+      <div id="new" class="bg-light text-dark py-5 my-5"></div>
 
     </div>
   </section>
-  <section class="bg-light text-dark py-5 " id="Properties">
-    <h1>To view more detail  please click on rent for</h1>
+  <div class="hr4"> <h2>To view more detail please click on rent for</h2></div>
+  
+  <section class="bg-light text-dark " id="Properties">
+   
   </section>
-  <section class="bg-dark text-light py-5 vh-100" id="footer">
+  <section class="bg-dark text-light py-5 vh-50" id="footer">
     <div class="container vh-50 p-4">
       <div class="row align-items-start py-5">
         <div class="col-sm-3">
@@ -133,11 +120,11 @@
             <h6><i class="bi bi-geo-alt"></i> 774 NE 84th St Miami, FL 33879</h6>
           </div>
           <div class="col-sm-6">
-            <form action="https://formspree.io/f/xrgjvrvr"
-            method="POST">
-            <input class="input" name="name" type="text" placeholder="Please enter the email" size="50" required="" >
-            <button class="btn btn-link text-light " type="submit">Submit</button>
-          </div></form>
+            <form action="https://formspree.io/f/xrgjvrvr" method="POST">
+              <input class="input" name="name" type="text" placeholder="Please enter the email" size="50" required="">
+              <button class="btn btn-link text-light " type="submit">Submit</button>
+          </div>
+          </form>
           <div class="col-sm-3 py-2">
             <h6> > Los Angeles</h6>
           </div>
@@ -169,8 +156,10 @@
         © Michaela - All rights reserved
       </div>
   </section>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Initialize AOS -->
@@ -179,6 +168,7 @@
   </script>
   <script src="https://kit.fontawesome.com/2dd6cd0ef4.js" crossorigin="anonymous"></script>
   <script src="./javascript/code.js"></script>
+  
 </body>
 
 </html>
